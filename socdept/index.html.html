@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Department of Sociology - Sahaspur Degree College</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+<style>
+/* GLOBAL STYLES */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins;background:#f5f5f5;color:#333}
+header{background:#0b2545;color:#fff;padding:20px;display:flex;justify-content:space-between;align-items:center;}
+header h1{font-family:'Playfair Display', serif;font-size:24px;}
+nav a{color:#fff;margin-left:15px;text-decoration:none;font-weight:500;}
+nav a:hover{text-decoration:underline;}
+.section{padding:50px;}
+h2{font-family:'Playfair Display', serif;color:#0b2545;margin-bottom:30px;text-align:center;}
+
+/* INTRO ANIMATION */
+#intro{
+  position:fixed;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  background: linear-gradient(-45deg, #0b2545, #1e3c72, #4facfe, #00f2fe);
+  background-size: 400% 400%;
+  animation: gradientBG 5s ease infinite;
+}
+#intro h1{
+  font-family:'Playfair Display', serif;
+  font-weight:700;
+  color:#ffffff;
+  font-size:60px;
+  opacity:0;
+  animation:showText 4s ease forwards;
+  text-shadow: 0 0 15px rgba(255,255,255,0.8);
+}
+@keyframes showText{
+  0%{opacity:0;transform:scale(0.5);}
+  50%{opacity:1;transform:scale(1);}
+  100%{opacity:1;transform:scale(1.05);}
+}
+@keyframes gradientBG{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* FACULTY SECTION */
+.faculty-section{padding:50px;background:#f5f7fa;text-align:center;}
+.faculty-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;}
+.faculty-card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 6px 15px rgba(0,0,0,0.12);}
+.faculty-card img{width:120px;height:120px;object-fit:cover;border-radius:50%;margin-bottom:15px;}
+.faculty-card h3{margin:0;font-family:'Poppins',sans-serif;font-size:16px;color:#0b2545;}
+
+/* GALLERY SECTION */
+.gallery-section{padding:50px;background:#ffffff;text-align:center;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+.gallery img{width:100%;height:230px;object-fit:cover;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.15);transition:transform 0.3s ease;}
+.gallery img:hover{transform:scale(1.05);}
+
+/* CONTACT SECTION */
+.contact-section{padding:50px;background:#f5f7fa;text-align:center;}
+.contact-section p{margin:10px 0;font-size:16px;}
+</style>
+</head>
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+  <h1>Welcome to Sociology Department</h1>
+</div>
+
+<!-- HEADER -->
+<header>
+  <h1>Sahaspur Degree College</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#faculty">Faculty</a>
+    <a href="#gallery">Department Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<div id="main" style="display:none;">
+
+<!-- HOME SECTION -->
+<section id="home" class="section" style="position:relative;overflow:hidden;background:#0b2545;color:#fff;">
+  <!-- Animated background dots -->
+  <canvas id="social-bg" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas>
+
+  <div style="position:relative;z-index:1;max-width:1200px;margin:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:50px 20px;">
+    <!-- Hero Text -->
+    <div style="flex:1;min-width:300px;padding:20px;">
+      <h1 style="font-family:'Playfair Display', serif;font-size:50px;margin-bottom:20px;">Department of Sociology</h1>
+      <p style="font-family:'Poppins', sans-serif;font-size:18px;line-height:1.6;">
+        Understanding Society. Exploring Human Connections. Empowering Minds.
+      </p>
+    </div>
+    
+    <!-- Hero Image Placeholder -->
+    <div style="flex:1;min-width:300px;padding:20px;text-align:center;">
+      <img src="images/home-hero.jpg" alt="Sociology Visual" style="width:100%;max-width:400px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.2);">
+    </div>
+  </div>
+
+  <!-- Highlights -->
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;margin-top:50px;position:relative;z-index:1;">
+    <div style="background:#fff;color:#0b2545;padding:20px;margin:10px;border-radius:12px;flex:1 1 200px;max-width:250px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <h3>Research & Seminars</h3>
+      <p>Explore social phenomena through innovative research and workshops.</p>
+    </div>
+    <div style="background:#fff;color:#0b2545;padding:20px;margin:10px;border-radius:12px;flex:1 1 200px;max-width:250px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <h3>Student Activities</h3>
+      <p>Engaging programs that connect students to real-world social contexts.</p>
+    </div>
+    <div style="background:#fff;color:#0b2545;padding:20px;margin:10px;border-radius:12px;flex:1 1 200px;max-width:250px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <h3>Community Engagement</h3>
+      <p>Building relationships with local communities for hands-on learning.</p>
+    </div>
+    <div style="background:#fff;color:#0b2545;padding:20px;margin:10px;border-radius:12px;flex:1 1 200px;max-width:250px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <h3>Innovative Curriculum</h3>
+      <p>Structured programs to understand society, culture, and social change.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section">
+<h2>About Department</h2>
+<p style="max-width:800px;margin:auto;line-height:1.6;">The Department of Sociology was established to promote academic excellence in the study of social institutions and relationships. Our vision is to foster critical thinking, research, and social responsibility among students.</p>
+<h3 style="text-align:center;margin-top:20px;">Vision</h3>
+<ul style="max-width:500px;margin:15px auto;line-height:1.5;">
+<li>Promote social awareness and responsibility</li>
+<li>Encourage research and innovation</li>
+</ul>
+<h3 style="text-align:center;margin-top:20px;">Mission</h3>
+<ul style="max-width:500px;margin:15px auto;line-height:1.5;">
+<li>Provide quality teaching in sociology</li>
+<li>Engage students in community-oriented research</li>
+<li>Uphold ethical academic practices</li>
+</ul>
+</section>
+
+<!-- COURSES SECTION -->
+<section id="courses" class="section">
+<h2>Courses Offered</h2>
+<ul style="max-width:600px;margin:auto;line-height:1.6;">
+<li>Undergraduate Program (BA in Sociology) - 3 years</li>
+<li>Postgraduate Program (MA in Sociology) - 2 years</li>
+<li>PhD Program in Sociology - Duration as per university norms</li>
+</ul>
+</section>
+
+<!-- FACULTY SECTION -->
+<section id="faculty" class="faculty-section">
+<h2>Our Faculty</h2>
+<div class="faculty-list">
+<div class="faculty-card"><img src="images/faculty/default.jpg" alt="Faculty"><h3>Sangram Kishore Parida</h3></div>
+<div class="faculty-card"><img src="images/faculty/default.jpg" alt="Faculty"><h3>Satabdi Bal</h3></div>
+<div class="faculty-card"><img src="images/faculty/default.jpg" alt="Faculty"><h3>Jay Dev Sathpathy</h3></div>
+</div>
+</section>
+
+<!-- DEPARTMENT GALLERY -->
+<section id="gallery" class="gallery-section">
+<h2>Department Gallery</h2>
+<div class="gallery">
+<img src="images/gallery/photo1.jpg" alt="Department Activity">
+<img src="images/gallery/photo2.jpg" alt="Department Activity">
+<img src="images/gallery/photo3.jpg" alt="Department Activity">
+</div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+<h2>Contact Us</h2>
+<p>Sahaspur Degree College</p>
+<p>Balichandrapur, Jajpur, Odisha</p>
+<p>Email: NA | Phone: NA</p>
+</section>
+
+</div>
+
+<!-- SCRIPT FOR INTRO (RUN ONCE) -->
+<script>
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.getElementById("intro").style.display="none";
+    document.getElementById("main").style.display="block";
+  },4500); // Intro visible for ~4.5 sec
+});
+
+// SOCIAL CONNECTIONS ANIMATION FOR HOME HERO
+const canvas = document.getElementById('social-bg');
+const ctx = canvas.getContext('2d');
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
+let particles = [];
+function random(min,max){ return Math.random()*(max-min)+min;}
+for(let i=0;i<80;i++){ particles.push({x:random(0,width),y:random(0,height),r:random(2,5),dx:random(-0.5,0.5),dy:random(-0.5,0.5)});}
+function animate(){
+  ctx.clearRect(0,0,width,height);
+  for(let p of particles){
+    ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle='rgba(255,255,255,0.6)'; ctx.fill();
+    p.x += p.dx; p.y += p.dy;
+    if(p.x<0||p.x>width)p.dx*=-1;
+    if(p.y<0||p.y>height)p.dy*=-1;
+  }
+  requestAnimationFrame(animate);
+}
+animate();
+window.addEventListener('resize',()=>{ width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; });
+</script>
+
+</body>
+</html>
